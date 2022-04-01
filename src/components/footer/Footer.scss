@@ -1,5 +1,48 @@
 footer {
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: 40% 60%;
+  background: rgba(0, 0, 0, 0.9);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 20px 0;
+
+  .wrapper-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0;
+      color: rgb(205, 217, 230);
+      font-family: "Nunito-Regular", "Arial", serif;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      text-indent: 10px;
+      padding: 0 10px;
+    }
+
+    .icon {
+      color: rgb(0, 180, 235);
+    }
+  }
+
+  .wrapper-social-media {
+    display: inherit;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    display: block;
+    padding: 10px 0;
+
+    .wrapper-text {
+      .icon {
+        display: none;
+      }
+    }
+
+    .wrapper-social-media {
+      display: inherit;
+    }
+  }
 }

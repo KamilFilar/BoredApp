@@ -1,5 +1,8 @@
 import React from "react";
+import SocialMediaItems from './footer-social-media/SocialMediaItmes';
 import "./Footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 class Footer extends React.Component {
   socialMediaObj = {
@@ -7,35 +10,36 @@ class Footer extends React.Component {
       {  
         name: 'Github',
         link: 'https://github.com/KamilFilar',
-        icon: ''
+        icon: 'faGithub'
       },
       {
         name: 'Facebook',
-        link: '',
-        icon: ''
+        link: 'https://www.facebook.com/kamilfilar',
+        icon: 'faFacebook'
       },
       {
         name: 'Discord',
-        link: 'CycuSolo#5102',
-        icon: ''
+        link: 'https://discord.gg/DFf5qFNUWM',
+        icon: 'faDiscord'
       }
     ]
   };
 
-  
-
   render() {
-    const socialMedias = this.socialMediaObj.elements.map(elem => {
-      return <div key={elem.name}>{elem.name}</div>
+    const socialMedias = this.socialMediaObj.elements.map(e => {
+      return <SocialMediaItems element={e} />
     })
 
     return (
       <footer>
         <div className="wrapper-text">
-          <img src="" />
           <p>
-            Are you bored? Find something interesting to do!
+            Are you still bored? Find me on social media and let's do something great!
           </p>
+          <FontAwesomeIcon
+            icon={ faAngleDoubleRight }
+            className="icon fa-2x"
+          />
         </div>
         <div className="wrapper-social-media">
           { socialMedias }

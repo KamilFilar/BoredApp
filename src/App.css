@@ -2,6 +2,11 @@
   position: relative;
   box-sizing: border-box;
   /* text-align: center; */
+}
 
-  
+@font-face {
+  font-family: "Nunito-Regular";
+  src: 
+    local("Nunito-Regular"),
+    url('./assets/fonts/Nunito-Regular.ttf');
 }
