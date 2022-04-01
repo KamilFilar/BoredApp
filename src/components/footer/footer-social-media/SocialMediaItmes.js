@@ -11,13 +11,13 @@ function checkIcon(icon) {
 
 const SocialMediaItems = (props) => {
   return (
-    <div className="social-media-item" key={props.element.name}>
-      <a href={props.element.link} target="_blank">
+    <div className="social-media-item" key={ props.element.name }>
+      <a href={ props.element.link } target="_blank">
         <FontAwesomeIcon
-          icon={checkIcon(props.element.icon)}
+          icon={ checkIcon(props.element.icon) }
           className="icon fa-lg"
         />
-        {props.element.name}
+        { props.element.name }
       </a>
     </div>
   );

@@ -1,8 +1,13 @@
 footer {
-  background: rgba(0, 0, 0, 0.9);
   display: grid;
   grid-template-columns: 40% 60%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 20px 0;
+  border-top: 2px solid black;
+  background: rgba(0, 0, 0, 0.4);
 
   .wrapper-text {
     display: flex;
@@ -12,11 +17,10 @@ footer {
     p {
       margin: 0;
       color: rgb(205, 217, 230);
-      font-family: "Nunito-Regular", "Arial", serif;
       font-size: 1.2rem;
       letter-spacing: 1px;
       text-indent: 10px;
-      padding: 0 10px;
+      padding: 0 0 0 20px;
     }
 
     .icon {
@@ -36,6 +40,10 @@ footer {
     padding: 10px 0;
 
     .wrapper-text {
+      p {
+        padding: 0 15px;
+      } 
+
       .icon {
         display: none;
       }
