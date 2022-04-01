@@ -1,0 +1,72 @@
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 0 15px;
+    color: rgb(205, 217, 230);
+
+    span {
+      color: rgb(0, 180, 235);
+      display: inline-block;
+      animation: wave-text 1s ease-in-out infinite;
+    }
+
+    @for $i from 1 through 4 {
+      span:nth-of-type(#{$i}) {
+        animation-delay: $i * 0.1s;
+      }
+    }
+  }
+
+  &__box {
+    margin: 40px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+      border: 2px solid rgb(0, 180, 235);
+      box-shadow: 0 0 15px rgb(0, 130, 170);
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 2px solid rgb(0, 195, 255);
+        box-shadow: 0 0 25px rgb(0, 180, 235);
+      }
+    }
+
+    p {
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      font-size: 1.1rem;
+      margin: 7px 0;
+    }
+  }
+}
+
+@keyframes wave-text {
+  0% {
+    transform: translateY(0em);
+  }
+  60% {
+    transform: translateY(-0.3em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}

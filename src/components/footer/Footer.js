@@ -27,7 +27,7 @@ class Footer extends React.Component {
 
   render() {
     const socialMedias = this.socialMediaObj.elements.map(e => {
-      return <SocialMediaItems element={e} />
+      return <SocialMediaItems element={e} key={e.name}/>
     })
 
     return (

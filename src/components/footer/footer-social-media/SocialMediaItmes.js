@@ -12,7 +12,7 @@ function checkIcon(icon) {
 const SocialMediaItems = (props) => {
   return (
     <div className="social-media-item" key={ props.element.name }>
-      <a href={ props.element.link } target="_blank">
+      <a href={ props.element.link } target="_blank" rel="noreferrer">
         <FontAwesomeIcon
           icon={ checkIcon(props.element.icon) }
           className="icon fa-lg"
