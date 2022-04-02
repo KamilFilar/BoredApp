@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import "./Search.scss";
 
 const letterToAnimation = ["Y", "o", "u", "r"];
@@ -14,6 +15,18 @@ const changeIcon = () => {
   return elem.innerHTML = getRandomEmoji();
 }
 
+const getData = () => {
+  const API = 'http://www.boredapi.com/api/activity';
+
+  axios.get(API)
+    .then( (res) => {
+      console.log(res.data);
+    })
+    .catch( (err) => {
+      console.log(err);
+    })
+}
+
 class Search extends React.Component {
   render() {
     return (
@@ -22,7 +35,7 @@ class Search extends React.Component {
           Don't waste { lettersAnimation } time!
         </p>
         <div className="search-wrapper__box">
-          <button onClick={ changeIcon } id="search-btn">
+          <button onClick={ () => { getData(); changeIcon(); } } id="search-btn">
             { getRandomEmoji() }
           </button>
           <p> Click me and do something </p>
