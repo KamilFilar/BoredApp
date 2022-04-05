@@ -5,6 +5,7 @@
   flex-direction: column;
 
   &__title {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 4px;
@@ -56,6 +57,17 @@
       font-size: 1.1rem;
       margin: 7px 0;
     }
+  }
+
+  &__result {
+    text-align: center;
+    color: rgb(177, 226, 255);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 5% 0;
+    padding: 10px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
   }
 }
 

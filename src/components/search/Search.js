@@ -11,7 +11,7 @@ const getRandomEmoji = () => {
 }
 
 const changeIcon = () => {
-  let elem = document.getElementById("search-btn");
+  let elem = document.querySelector(".search-wrapper__box--btn");
   return elem.innerHTML = getRandomEmoji();
 }
 
@@ -20,7 +20,8 @@ const getData = () => {
 
   axios.get(API)
     .then( (res) => {
-      console.log(res.data);
+      const elem = document.querySelector(".search-wrapper__result");
+      return elem.innerHTML = `${res.data.activity}!`;
     })
     .catch( (err) => {
       console.log(err);
@@ -35,11 +36,12 @@ class Search extends React.Component {
           Don't waste { lettersAnimation } time!
         </p>
         <div className="search-wrapper__box">
-          <button onClick={ () => { getData(); changeIcon(); } } id="search-btn">
+          <button onClick={ () => { getData(); changeIcon(); } } className="search-wrapper__box--btn">
             { getRandomEmoji() }
           </button>
           <p> Click me and do something </p>
         </div>
+        <p className="search-wrapper__result"></p>
       </div>
     );
   }
